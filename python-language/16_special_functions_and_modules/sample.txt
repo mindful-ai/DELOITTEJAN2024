@@ -1,0 +1,5 @@
+Data sampling is a statistical analysis 
+technique used to select, manipulate and 
+analyze a representative subset of data points 
+to identify patterns and trends in the larger 
+data set being examined.
