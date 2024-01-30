@@ -1,0 +1,19 @@
+1. L = ["apples", "banana", "cherry", "guava", "kiwi", "watermelon", "orange"]
+    Sort the above list with respect to the last charecter
+2. Consider the wordjumblegame (OOP) version. Along with the points print the time taken
+   by individual players in the report, example:
+   FINAL SCORES:
+    Akhilesh         |  4   |  17 seconds
+    Vidhi            |  6   |  18 seconds
+
+3. Write  a program to accept text from the user and provide a character histogram/frequency report
+   of the input text.
+4. Access 16_special_functions_and_modules.ipynb and replace the following logic with a map():
+        # Extract all the extensions
+        exts = []
+        for file in os.listdir():
+            ext = os.path.splitext(file)[1][1:]
+            exts.append(ext)
+        exts
+5. Create a pandas series using a list of space separated numbers from the user? Name the series 
+"user_series". 
