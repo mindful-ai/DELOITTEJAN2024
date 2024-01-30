@@ -1,0 +1,12 @@
+List employees with salary greater that 5000
+List employees belonging to Asia Region
+List employees seniority wise
+Number of employees in each country, which country has the highest number of employees?
+Which is the most popular job?
+Which job has the highest range?
+Number of dependents for each employee?
+How many jobs each department has?
+List the location details for each employee?
+Employees hired before 1999 in UK region?
+
+
