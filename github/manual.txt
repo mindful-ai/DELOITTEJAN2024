@@ -1,0 +1,108 @@
+Exercise #1: Cloning a git repository
+
+git clone https://github.com/mindful-ai/JSREF
+
+Subsequent changes can be pulled
+
+git pull origin
+git pull origin main
+
+
+Exercise #2 Setting up and working with a git local repository
+
+Create a folder ex: python_works and add some files
+
+Initialize the folder: git init
+Check the status: git status
+
+Stage the files: git add *
+Check the status: git status
+
+Commit the files: git commit -m "first commit"
+Check the status: git status
+
+Make chenges to some file
+
+Check the status: git status
+Commit the files: git commit -am "modified readme"
+git status
+
+Get the log of commits made: git log/git log --oneline
+git reset 2fed45c
+git log --oneline
+
+To undo all changes: git reset 2fed45c --hard
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+Exercise #3: Pushing the local repository to the github
+
+Create a repository which is essentially a project in the github
+
+In the local repository:
+
+git init
+git remote add origin https://github.com/mindful-ai/test.git
+git push origin master (git push -u origin master -> git push)
+
+Make some changes to a file
+git status
+git commit -am "second commit"
+git status
+git push origin master 
+
+Add a new file
+git add b.py
+git commit -am "new file added"
+git push origin master
+
+Add s new file
+git add c.py
+git stash push c.py -m "stash push" -> observe the list of files, do you see c.py?
+git stash apply -> to being the file to working area
+
+
+-------------------------------------------------------------------------------------
+
+
+Exercise #4: Creating a local branch and merging
+git checkout -b feature_branch
+git branch
+
+Create a file
+git add d.py
+git commit -m "new file added"
+
+Observe what happens when you switch to master branch
+git branch master
+
+How to merge the branches?
+git checkout master
+git merge feature_branch
+
+git branch
+git branch -d feature_branch
+
+-------------------------------------------------------------------------------------
+
+
+Exercise #5: Creating a branch on github and creating a pull request
+
+git checkout -b feature_branch
+git branch
+
+
+git add d.p
+git commit -m "yet another file added"
+
+git checkout master
+git diff feature_branch
+
+git push -u origin feature_branch -> observe how to create pull request
+follow the steps to create a PR and Merge in github
+
+
