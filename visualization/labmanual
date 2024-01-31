@@ -106,7 +106,7 @@ Exercise #1 Preparing Data
 	not look at the day and month, and therefore does not always return the
 	correct age for each customer.
 
-	Customer Age = IF( FORMAT('customer'[BirthDate], "MMDD") <= FORMAT(TODAY), "MMDD"),
+	Customer Age = IF( FORMAT('customer'[BirthDate], "MMDD") <= FORMAT(TODAY(), "MMDD"),
 				   DATEDIFF('customer'[BirthDate], TODAY(), YEAR),
 				   DATEDIFF('customer'[BirthDate], TODAY(), YEAR) - 1)
 
@@ -124,15 +124,22 @@ Exercise #1 Preparing Data
 	bucket.
 
 	Experiment #6: Navigation: creating a relationship between tables
+
+	Use internetSales query
+
 	Navigation functions (RELATED and RELATEDTABLE) allow calculated columns to interact with and use existing relationships.
 
-	The Internet Sales table has a relationship to the Sales Territory table, and the Sales Territory table has the region. Therefore, you can determine the region for each sale by doing a simple lookup operation.
+	The Internet Sales table has a relationship to the Sales Territory table, and the Sales Territory table has the region. 
+	Therefore, you can determine the region for each sale by doing a simple lookup operation.
 
-	Temperature Key = RELATED(territory[SalesTerritoryRegion]) & RELATED(geography[CountryRegionCode])
+	Temperature Key = RELATED(salesTerritory[SalesTerritoryRegion]) & RELATED(geography[CountryRegionCode])
 
 	This technique can be used to create unique columns and these help establishing relationships.
 
 	Experiment #7: Calculated Measures
+
+	Use internetSales query
+
 	To create your first measure, select the Internet Sales table and then click New Measure
 
 	Total Sales = SUM('internetsales'[SalesAmount])
@@ -156,6 +163,7 @@ Exercise #1 Preparing Data
 	A simple definition of the filter context would be that it is simply anything in your report that is filtering a measure. 
 
 	Experiment #8: CALCULATE
+
 	This is because the CALCULATE function can be used to ignore, overwrite, or change the existing filter context.
 
 	Let's assume you want to return the total sales of each country as a percentage of all countries. This is a very basic percent of total calculation: Total Sales per country divided by Total Sales for all countries. However, how do you get the total sales of all the countries so that you can perform this calculation? This is where the CALCULATE function comes into the picture.
@@ -196,8 +204,4 @@ Exercise #1 Preparing Data
 	--------------------------------------------------------------------------------------------------------------------------
 
 	
-	1. 
-	2.
-	3.
-	4.
-	5.
+	Any Five Examples
