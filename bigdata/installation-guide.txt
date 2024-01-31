@@ -1,0 +1,32 @@
+Steps need to perform:
+
+Step1: Download Vmware workstation player using link below:
+
+https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1700&productId=1377&rPId=97014
+
+ 
+
+Step2: Download Jigsaw vm using link below:
+
+https://drive.google.com/file/d/1wCa43KSpPlZSi22KVS3jcnTy3iLEx_6C/view
+
+ 
+
+Step3: Open the downloaded “OVA” file in previous step using Vmware Workstation player.
+
+After downloading, Extract the Hadoop2 VM.
+Open your “VMWare workstation player” on your desktop shortcut. Click open a virtual machine.
+It will ask the path. Go to the path where you have extracted the ubuntu. You will find the ubuntu
+Image. Choose and open.
+Once you got this window. Click play virtual machine. It will take few minutes initially to run.
+Choose “I copied it” if a popup window appears. And if it is asking to download latest version just
+click “Remind me later”.
+Username and Password:
+Username: hdhuser
+Password: hadoop
+
+Type “start-all.sh” to start Hadoop services.
+type “jps” to see the Hadoop services.
+ 
+
+Step4: Once imported set your RAM size to 8 GB and CPU core to 2 cores. Once changes done, you can start the vm using play button(Green colour).
