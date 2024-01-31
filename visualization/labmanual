@@ -1,0 +1,203 @@
+Exercise #1 Preparing Data
+-------------------------------------------------------------
+
+1. Save the Power BI Desktop file
+
+2. Set Options: 
+ 	File > Options and settings
+	In the Options window, at the left, in the Current File group, select Data Load.
+	In the Relationships group, clear the two options that are selected.
+
+3. Get data
+	Import data from excel
+	To create queries, select the following six tables:
+
+		DimEmployee
+		DimEmployeeSalesTerritory
+		DimProduct
+		DimReseller
+		DimSalesTerritory
+		FactResellerSales
+
+	To apply transformations to the data of the selected tables, select Transform Data. You won’t be transforming the data in this lab. The objectives of this lab are to explore and profile the data in the Power Query Editor window.
+
+4. Preview queries: First, you will learn relevant information about the data. You will also use column quality, column 	 
+   distribution, and column profile tools to understand the data, and assess data quality.
+
+   		Open Power Query editor using the Transform Data tab
+   		Select DimEmployee
+   		At the bottom left, in the status bar, notice the table statistics
+   		In the data preview pane, scroll horizontally to review all columns
+
+   		To assess column quality, on the View ribbon tab, from inside the Data Preview group, select Column Quality.
+   		Assess the Column Distribution as well: When the distinct and unique counts are the same, it means the column contains unique values. When modeling, it’s important that some tables contain unique columns. You can use these unique columns to create one-to-many relationships during Data Modeling
+   		Check on Column Profile to view the statistics and values distribution, you can check that for every column and observe
+
+5. Loading Data
+
+		5.1 Change the query names from DimEmployee to Employee: The query name will determine the model table name. It's recommended to define concise, yet friendly, names.
+		5.2 To locate a specific column, on the Home ribbon tab, from inside the Manage Columns group, click the Choose Columns down-arrow, and then select Go to Column.
+		5.3 To order the list by column name, click the AZ sort button, and then select Name
+		5.4 To filter the query, in the SalesPersonFlag column header, click the down-arrow, and then uncheck FALSE.Say OK
+		5.5 In the Query Settings pane, in the Applied Steps list, notice the addition of the Filtered Rows step.Each transformation you create results in additional step logic. It's possible to edit or delete steps. It's also possible to select a step to preview the query results at that stage of transformation.
+
+		Removing Columns:
+		5.6 To remove columns, on the Home ribbon tab, from inside the Manage Columns group, click the Choose Columns icon.
+		5.7 In the Choose Columns window, to uncheck all columns: Choose
+			EmployeeKey
+			EmployeeNationalIDAlternateKey
+			FirstName
+			LastName
+			Title
+			EmailAddress
+		5.8 In the Applied Steps list, notice the addition of another query step.
+
+		Adding Column:
+		5.9 To create a single name column, first select the FirstName column header. While pressing the Ctrl key, select the LastName column. Right-click either of the select column headers, and then in the context menu, select Merge Columns. Many common transformations can be applied by right-clicking the column header, and then choosing them from the context menu. However, that all transformations and more are available in the ribbon.
+		5.10 In the Merge Columns window, in the Separator dropdown list, select Space. In the New Column Name box, replace the text with Salesperson. Click OK
+
+		Renaming a Column:
+		5.11 To rename the EmployeeNationalIDAlternateKey column, double-click the EmployeeNationalIDAlternateKey column header. Replace the text with EmployeeID, and then press Enter.
+
+
+		--- Further experimentations --------
+
+		------------- Configure SalespersonRegion -> Remove the last 2 columns
+		------------- Configure Product -> ProductKey, EnglishProductName, StandardCost, Color
+		------------- COnfigure Reseller -> ResellerKey, BusinessType, ResellerName, DimGeography: Add City, StateProvinceName, EnglishCountryRegionName
+
+		Refer: https://docs.microsoft.com/en-us/learn/modules/clean-data-power-bi/8-lab for further
+
+		------------- Update Product query
+		------------- Update ColorFormats query
+
+		5.XX To load the data model, on the File backstage view, select Close & Apply. All load-enabled queries are now loaded to the data model.
+
+	--------------------------------------------------------------------------------------------------------------------------
+
+	DAX Lab Exercises
+
+	--------------------------------------------------------------------------------------------------------------------------
+
+	Experiment #1: Calculating the Full Name column
+	Customer Query
+	Add New Column
+	Full Name = 'customer'[FirstName] & " " & 'customer'[LastName]
+
+	Experiment #2: Calculating the Month Year column
+	Date Query
+	Add New Column
+	Month Year = RIGHT("0" & 'date'[MonthNumberOfYear], 2) & "-" & 'date'[CalendarYear]
+
+	Experiment #3: Using the FORMAT function
+	Date Query
+	Add New Column
+	Change OrderDate column data type to Date
+	Month Year Format = FORMAT('internetsales'[OrderDate], "YYYY-MM")
+
+	Experiment #4: Age Calculation, determining the age of the customer
+	Customer Query
+	Add New Column
+	Check the data type of BirthDate
+	Cutomer Age = DATEDIFF('customer'[BirthDate], TODAY(), YEAR)
+
+	The TODAY function returns the current date and time. The DATEDIFF function
+	returns the count of the specified interval between two dates; however, it does
+	not look at the day and month, and therefore does not always return the
+	correct age for each customer.
+
+	Customer Age = IF( FORMAT('customer'[BirthDate], "MMDD") <= FORMAT(TODAY), "MMDD"),
+				   DATEDIFF('customer'[BirthDate], TODAY(), YEAR),
+				   DATEDIFF('customer'[BirthDate], TODAY(), YEAR) - 1)
+
+	Experiment #5: Age Breakdown using switch()
+	Customer Query
+	Add New Column
+	Age Breakdown = SWITCH(TRUE(),
+						'customer'[Customer Age] >= 55, "55 +",
+						'customer'[Customer Age] >= 45, "45-54",
+						'customer'[Customer Age] >= 35, "35-44",
+						"18-34")
+
+	There are three logical tests, and if a customer age does not evaluate to true on any of those
+	logical tests, then that customer is automatically put into the 18-34 age
+	bucket.
+
+	Experiment #6: Navigation: creating a relationship between tables
+	Navigation functions (RELATED and RELATEDTABLE) allow calculated columns to interact with and use existing relationships.
+
+	The Internet Sales table has a relationship to the Sales Territory table, and the Sales Territory table has the region. Therefore, you can determine the region for each sale by doing a simple lookup operation.
+
+	Temperature Key = RELATED(territory[SalesTerritoryRegion]) & RELATED(geography[CountryRegionCode])
+
+	This technique can be used to create unique columns and these help establishing relationships.
+
+	Experiment #7: Calculated Measures
+	To create your first measure, select the Internet Sales table and then click New Measure
+
+	Total Sales = SUM('internetsales'[SalesAmount])
+
+	Once the measure has been created, navigate to the modeling ribbon and change the formatting to $ English (United States)
+	Or Click on the given measure -> Measure Tools -> Choose $ in Formatting
+
+	Similarly,
+
+	Total Cost = SUM(internetsales[TotalProductCost])
+	Profit = SUM('internetsales'[SalesAmount]) - SUM('internetsales'[TotalProductCost])
+	Profit Margin = DIVIDE([Profit], [Total Sales])
+
+	[CHECK] How to display these measures on graph?
+
+
+	FILTER CONTEXT
+	--------------------------------------------------------------------------------------------------------------------------
+
+	The automatic filtering that occurs in Power BI is a really awesome feature, and is one of the reasons that so many companies are gravitating to this tool. Automatic filtering is directly tied to the concept of the filter context.
+	A simple definition of the filter context would be that it is simply anything in your report that is filtering a measure. 
+
+	Experiment #8: CALCULATE
+	This is because the CALCULATE function can be used to ignore, overwrite, or change the existing filter context.
+
+	Let's assume you want to return the total sales of each country as a percentage of all countries. This is a very basic percent of total calculation: Total Sales per country divided by Total Sales for all countries. However, how do you get the total sales of all the countries so that you can perform this calculation? This is where the CALCULATE function comes into the picture.
+
+	[1] Create a new Calculated Measure
+
+	Total Sales All Countries = CALCULATE([Total Sales], ALL('territory'[SalesTerritoryCountry]))
+
+	The first parameter of the CALCULATE function is an expression, and you can think of this as an aggregation of some kind. In this example, the aggregation is simply Total Sales. The second parameter is a filter that allows the current filter context to be modified in some way. In the preceding example, the filter context is modified by ignoring any filters that come from the country attribute. Let's take a look at the definition for the ALL function used in thesecond parameter of the CALCULATE function:
+	
+	ALL: Returns all the rows in a table, or all the values in a column, ignoring any filters that may have been applied.
+
+	[2] Percentage total calculation:
+
+	PCT of All Countries = DIVIDE([Total Sales], [Total Sales All Countries])
+
+	You can use all these to build the table.
+
+	Experiment #9: Time Intelligence
+
+	Year to Date Sales:
+	YTD Sales = TOTALYTD([Total Sales], internetsales[OrderDate])
+
+	Maybe your requirement is slightly more complex, and you need to see the year-to-date sales based on your fiscal year end rather than the calendar year end date. The TOTALYTD function has an optional parameter that allows you to change the default year end date from "12/31" to a different date.
+
+	Fiscal YTD Sales = TOTALYTD([Total Sales], 'internetsales'[OrderDate], "03/31")
+
+	[CHECK] Make a table of Year, English Month Name, Sales, YTD Sales, Fiscal YTD Sales
+
+	Prior Year Sales:
+	Prior Year Sales = CALCULATE( [Total Sales], SAMEPERIODLASTYEAR('internetsales'[OrderDate]))
+
+
+	--------------------------------------------------------------------------------------------------------------------------
+
+
+	VISUALIZING DATA:
+	--------------------------------------------------------------------------------------------------------------------------
+
+	
+	1. 
+	2.
+	3.
+	4.
+	5.
