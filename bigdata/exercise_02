@@ -1,0 +1,37 @@
+---------------------------------------------------------------
+MapReduce
+---------------------------------------------------------------
+
+From the LMS download:
+M10 - MapReduce-YARN-Hands-On-Exercises-Code-Datasets
+extract the contents to a folder named lab02
+copy lab02 to c:\sharedfolder in windows
+
+mount it onto the sharedfolder in VM
+sh Downloads/mountsf
+
+-------------- step 1
+
+Copy all the content into local folder called lab02 in VM
+
+mkdir lab02
+cp -r Downloads/sharedfolder/lab02/* ./lab02
+
+-------------- step 2
+
+Put the data into hdfs
+
+hadoop fs -mkdir mrdata
+hadoop fs -put lab02/mrinput* mrdata
+hadoop fs -ls mrdata
+
+------------- step 3
+
+cd /lab02/MapRed1
+hduser@hduser-VirtualBox:~/lab02/MapRed1$
+yarn jar MapRed1.jar MR1Driver mrdata/mrinput2.txt mrdata/output2
+hadoop fs -ls mrdata
+hadoop fs -ls mrdata/output2
+hadoop fs -cat mrdata/output2/*0
+
+------------- step 4

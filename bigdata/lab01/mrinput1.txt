@@ -1,0 +1,200 @@
+1737275	Debt collection	"The CBE Group, Inc."	IL
+1735777	Debt collection	Transworld Systems Inc.	DC
+1736356	Debt collection	"Hunter Warfield, Inc."	NC
+1736467	Debt collection	Transworld Systems Inc.	VA
+1735839	Debt collection	"Credit Protection Association, L.P."	FL
+1735948	Bank account or service	Scottrade Bank	CA
+1735644	Bank account or service	Navy FCU	NJ
+1735535	Debt collection	Bonneville Billing and Collections	UT
+1735668	Debt collection	"Credit Solutions, LLC (KY)"	FL
+1735250	Mortgage	Embrace Home Loans Inc	CA
+1735384	Debt collection	"Unique Management Services, Inc"	OH
+1735413	Debt collection	"BWW Law Group, LLC"	MD
+1735435	Debt collection	"All State Credit Bureau, Inc."	TX
+1735424	Debt collection	Phoenix Financial Services LLC	FL
+1735193	Debt collection	Transworld Systems Inc.	NY
+1735265	Bank account or service	U.S. Bancorp	IL
+1735258	Consumer Loan	Ally Financial Inc.	MI
+1734772	Debt collection	"Hunter Warfield, Inc."	NV
+1734939	Consumer Loan	"CashCall, Inc."	KY
+1734916	Payday loan	"CashCall, Inc."	NE
+1735057	Debt collection	Synergetic Communication Inc	ME
+1734948	Consumer Loan	Nissan Motor Acceptance Corporation	NJ
+1735003	Debt collection	"NCC Business Services, Inc."	FL
+1734790	Credit reporting	"Credit Karma, Inc."	PR
+1733568	Debt collection	"Enhanced Recovery Company, LLC"	OH
+1733354	Debt collection	"AMCOL Systems, Inc."	OK
+1734622	Debt collection	Transworld Systems Inc.	TX
+1734379	Debt collection	"E. A. Uffman & Associates, Inc"	LA
+1734056	Debt collection	Forster & Garbus LLP	NY
+1733637	Debt collection	"The CBE Group, Inc."	VA
+1733384	Consumer Loan	Ally Financial Inc.	RI
+1733375	Debt collection	"NCC Business Services, Inc."	IL
+1734126	Credit card	Wells Fargo	MD
+1733822	Mortgage	"Bayview Loan Servicing, LLC"	MD
+1734515	Debt collection	"Capital Accounts, LLC"	GA
+1733309	Credit reporting	"Credit Karma, Inc."	FL
+1734098	Mortgage	"Bayview Loan Servicing, LLC"	GA
+1733837	Consumer Loan	Ally Financial Inc.	PA
+1733663	Debt collection	"Oxford Law, LLC"	OR
+1734666	Consumer Loan	"OneMain Financial Holdings, LLC"	NJ
+1734444	Bank account or service	Capital One	NY
+1734397	Payday loan	"MNE Services, Inc"	PA
+1734237	Consumer Loan	Ally Financial Inc.	PA
+1733659	Mortgage	Wells Fargo	CA
+1733233	Debt collection	"Jon Barry and Associates, Inc."	SC
+1734147	Bank account or service	Navy FCU	NV
+1731476	Debt collection	"CashCall, Inc."	CA
+1732656	Credit reporting	Equifax	OH
+1731620	Credit reporting	TransUnion	OH
+1732210	Debt collection	"Hunter Warfield, Inc."	TX
+1731319	Credit reporting	Equifax	GA
+1731315	Bank account or service	"FNIS (Fidelity National Information Services, Inc.)"	CA
+1732471	Credit reporting	Equifax	CA
+1732013	Credit reporting	Equifax	CA
+1733125	Credit reporting	Equifax	NH
+1732451	Consumer Loan	Ally Financial Inc.	MI
+1732615	Credit reporting	Equifax	TX
+1732282	Credit card	Amex	CA
+1731825	Debt collection	Atlantic Recovery Solutions LLC	CA
+1732062	Debt collection	"Convergent Resources, Inc."	CA
+1732271	Credit reporting	Equifax	CA
+1732352	Credit reporting	Equifax	MA
+1732324	Mortgage	Wells Fargo	CA
+1732883	Debt collection	"Convergent Resources, Inc."	TX
+1732239	Credit reporting	TransUnion	FL
+1731645	Credit reporting	Equifax	CA
+1731569	Consumer Loan	Pentagon FCU	NC
+1731814	Credit reporting	Equifax	LA
+1731535	Bank account or service	Ally Financial Inc.	CA
+1732828	Credit reporting	Equifax	AL
+1732784	Bank account or service	JPMorgan Chase	IL
+1732137	Debt collection	CNG Financial Corporation	IA
+1732901	Debt collection	"Jon Barry and Associates, Inc."	MS
+1731234	Credit reporting	Equifax	FL
+1731828	Credit reporting	Equifax	TX
+1732797	Mortgage	Ocwen	NY
+1732177	Credit reporting	Equifax	FL
+1731978	Mortgage	"Bayview Loan Servicing, LLC"	MN
+1731458	Bank account or service	JPMorgan Chase	FL
+1731308	Debt collection	CNG Financial Corporation	OH
+1732590	Payday loan	Speedy Cash Holdings	CA
+1732862	Credit reporting	Equifax	CA
+1733088	Credit reporting	TransUnion	MO
+1732960	Bank account or service	JPMorgan Chase	IN
+1732653	Credit reporting	Equifax	WA
+1733079	Consumer Loan	"CashCall, Inc."	CA
+1731991	Debt collection	"Enhanced Recovery Company, LLC"	IL
+1733121	Credit reporting	Equifax	CA
+1732475	Debt collection	"Enhanced Recovery Company, LLC"	TX
+1732722	Debt collection	"Contract Callers, Inc."	FL
+1732119	Credit reporting	Equifax	NV
+1731401	Mortgage	Nationstar Mortgage	CA
+1732039	Bank account or service	JPMorgan Chase	FL
+1732648	Consumer Loan	"Go Capital Holdings, LLC"	GA
+1732866	Bank account or service	JPMorgan Chase	NY
+1732932	Credit reporting	Equifax	MA
+1731282	Credit reporting	TransUnion	TN
+1731211	Credit reporting	Equifax	FL
+1732453	Debt collection	"OneMain Financial Holdings, LLC"	GA
+2328	Mortgage	Bank of America	OR
+2327	Credit card	Citibank	CO
+2323	Mortgage	Bank of America	OH
+2315	Mortgage	Bank of America	CO
+2302	Mortgage	Flagstar Bank	GA
+2298	Credit card	Bank of America	CA
+2295	Mortgage	Wells Fargo	OH
+2294	Credit card	JPMorgan Chase	CA
+2288	Credit card	Citibank	AZ
+86041	Mortgage	Wells Fargo	MN
+2285	Mortgage	M&T Bank	PA
+2283	Credit card	Synchrony Bank	MN
+2286	Mortgage	SunTrust Bank	TN
+2280	Credit card	JPMorgan Chase	VA
+2278	Credit card	Capital One	WA
+2275	Mortgage	Bank of America	NY
+2264	Credit card	JPMorgan Chase	AZ
+2272	Credit card	Capital One	TX
+2270	Credit card	Citibank	TX
+2266	Mortgage	U.S. Bancorp	TN
+2263	Credit card	Capital One	NY
+2261	Credit card	Capital One	MD
+2259	Credit card	Bank of America	CA
+2257	Mortgage	JPMorgan Chase	NJ
+2245	Mortgage	Bank of America	WI
+2254	Credit card	HSBC	MD
+2260	Credit card	Bank of America	CA
+2243	Credit card	Synchrony Bank	TN
+2242	Mortgage	Regions	FL
+2241	Mortgage	Bank of America	MD
+2240	Credit card	Citibank	NV
+2237	Mortgage	Wells Fargo	CO
+2231	Mortgage	Bank of America	MI
+2230	Credit card	JPMorgan Chase	UT
+2228	Credit card	Citibank	OH
+2226	Credit card	"Citizens Financial Group, Inc."	FL
+2225	Credit card	U.S. Bancorp	WA
+2214	Credit card	Wells Fargo	CO
+2216	Credit card	JPMorgan Chase	CT
+2215	Credit card	Capital One	CA
+2213	Credit card	Citibank	CO
+2207	Credit card	TD Bank	IL
+2203	Credit card	Bank of America	FL
+2200	Credit card	Citibank	IL
+2199	Credit card	Bank of America	IL
+2197	Credit card	Fifth Third Bank	FL
+2198	Mortgage	BB&T Financial	WV
+2196	Credit card	Citibank	CA
+2151	Credit card	Amex	OH
+2154	Credit card	JPMorgan Chase	FL
+2138	Credit card	Citibank	NJ
+2152	Credit card	Regions	LA
+2147	Mortgage	Citibank	TX
+2145	Credit card	SunTrust Bank	VA
+2144	Mortgage	JPMorgan Chase	NY
+1939	Credit card	Wells Fargo	CA
+2139	Mortgage	JPMorgan Chase	MI
+2137	Credit card	JPMorgan Chase	NJ
+2136	Mortgage	Wells Fargo	NC
+2135	Credit card	JPMorgan Chase	NY
+2134	Credit card	Amex	VA
+2130	Credit card	Citibank	NJ
+2126	Credit card	JPMorgan Chase	OH
+2121	Credit card	Bank of America	DE
+2118	Mortgage	JPMorgan Chase	NY
+2116	Credit card	PNC Bank	VA
+2108	Mortgage	EverBank	VT
+2105	Credit card	Synchrony Bank	NJ
+2103	Credit card	Capital One	VA
+2102	Mortgage	Wells Fargo	FL
+2101	Credit card	HSBC	WI
+2099	Credit card	Citibank	TX
+2094	Credit card	Amex	NY
+3410	Credit card	M&T Bank	PA
+3388	Mortgage	Ocwen	PA
+2090	Credit card	Citibank	VA
+3369	Credit card	Citibank	OH
+2088	Credit card	Citibank	FL
+2092	Mortgage	SunTrust Bank	AR
+3074	Mortgage	SunTrust Bank	CA
+2086	Credit card	Citibank	TN
+2084	Credit card	Capital One	IA
+2083	Credit card	Bank of America	TX
+2074	Credit card	JPMorgan Chase	CT
+2071	Credit card	Discover	FL
+2070	Credit card	Capital One	NY
+2067	Credit card	Capital One	NJ
+2065	Credit card	Wells Fargo	CA
+2066	Credit card	Bank of America	FL
+750	Mortgage	Bank of America	VA
+2063	Credit card	Citibank	OH
+2062	Credit card	JPMorgan Chase	VA
+2060	Credit card	Capital One	MI
+2057	Credit card	Bank of America	MI
+2053	Credit card	Capital One	GA
+2052	Credit card	Barclays	IL
+2051	Credit card	Capital One	AZ
+2050	Credit card	Capital One	FL
+2049	Credit card	Citibank	FL
+2047	Credit card	JPMorgan Chase	NY
+2046	Credit card	Bank of America	AK
